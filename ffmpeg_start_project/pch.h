@@ -8,7 +8,21 @@
 
 #ifndef PCH_H
 #define PCH_H
+#include <string>
+using namespace std;
 
 // TODO: 添加要在此处预编译的标头
+
+extern "C" {
+#include <libavutil/avassert.h>
+#include <libavutil/channel_layout.h>
+#include <libavutil/opt.h>
+#include <libavutil/mathematics.h>
+#include <libavutil/timestamp.h>
+#include <libavformat/avformat.h>
+#include <libswscale/swscale.h>
+#include <libswresample/swresample.h>
+}
+
 
 #endif //PCH_H
