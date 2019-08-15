@@ -154,10 +154,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="FFEncodePcmToAAc.h" />
     <ClInclude Include="FFMuxerObject.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FFEncodePcmToAAc.cpp" />
     <ClCompile Include="ffmpeg_start_project.cpp" />
     <ClCompile Include="FFMuxerObject.cpp" />
     <ClCompile Include="pch.cpp">
