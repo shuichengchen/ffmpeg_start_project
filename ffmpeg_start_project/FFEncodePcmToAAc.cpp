@@ -165,7 +165,7 @@ void FFEncodePcmToAAc::EnCode()
 	for (auto i = 0; i < 10000; i++)
 	{
 		//Read PCM
-		if (fread(m_pAACframe_buf, 1, m_nAAcDataSize / 2, m_pInPutFile) <= 0) {
+		if (fread(m_pAACframe_buf, 1, m_nAAcDataSize / 2, m_pInPutFile) <= 0) {//如果按4096读取 编码的aac快一倍，单通道读一半就可以了？
 			printf("Failed to read raw data! \n");
 			break;
 		}
