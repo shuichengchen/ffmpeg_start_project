@@ -15,9 +15,9 @@ int main()
 	const char*out_aac_filename = "pcmtoaac.aac";
 
 // 	FFMuxerObject object(input_h264_filename, input_audio_filename, out_filename);
-// 	if (object.InitFFmpeg())
-// 	{
-// 		object.Muxering();
+// 	if (object.InitFFmpeg())
+// 	{
+// 		object.Muxering();
 // 	}	
 	FFEncodePcmToAAc encodePcmToAAcObject(input_pcm_filename, out_aac_filename);
 	if (encodePcmToAAcObject.InitFFmpeg())
