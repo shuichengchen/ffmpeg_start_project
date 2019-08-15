@@ -20,6 +20,7 @@
 	av_dict_set(&movflags, "start_number", "1", 0);
 	av_dict_set(&movflags, "hls_list_size", "200", 0);
 3、mp4\Fmp4 音频为aac的时候 要去掉adts头部，封装m3u8或者ts的时候 是需要adts头的。
+4、注意codecpar->extradata是赋值 不然会存在封装文件格式不完善的情况
 */
 
 class FFMuxerObject

@@ -297,14 +297,7 @@ void FFMuxerObject::Muxering()
 			{
 				int a = 0;
 			}
-			if (pkt.pts == 0)
-			{
-				pkt.pts = 1;
-			}
-			if (pkt.dts == 0)
-			{
-				pkt.dts = 1;
-			}
+		
 			pkt.pts = av_rescale_q_rnd(pkt.pts, in_stream->time_base, out_stream->time_base, (AVRounding)(AV_ROUND_NEAR_INF | AV_ROUND_PASS_MINMAX));
 			pkt.dts = av_rescale_q_rnd(pkt.dts, in_stream->time_base, out_stream->time_base, (AVRounding)(AV_ROUND_NEAR_INF | AV_ROUND_PASS_MINMAX));
 

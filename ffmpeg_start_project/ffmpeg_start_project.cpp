@@ -10,7 +10,9 @@ int main()
 	const char*input_audio_filename = "Audioout.aac";
 	const char*out_filename = "muxer.mp4";
 	FFMuxerObject object(input_h264_filename, input_audio_filename, out_filename);
-	object.InitFFmpeg();
-	object.Muxering();
+	if (object.InitFFmpeg())
+	{
+		object.Muxering();
+	}	
 	return 1;
 }
