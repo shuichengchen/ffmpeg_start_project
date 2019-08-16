@@ -154,11 +154,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="FFAudioConversionObject.h" />
     <ClInclude Include="FFEncodePcmToAAc.h" />
     <ClInclude Include="FFMuxerObject.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FFAudioConversionObject.cpp" />
     <ClCompile Include="FFEncodePcmToAAc.cpp" />
     <ClCompile Include="ffmpeg_start_project.cpp" />
     <ClCompile Include="FFMuxerObject.cpp" />

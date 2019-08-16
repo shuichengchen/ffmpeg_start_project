@@ -4,6 +4,7 @@
 #include "pch.h"
 #include "FFMuxerObject.h"
 #include "FFEncodePcmToAAc.h"
+#include "FFAudioConversionObject.h"
 
 int main() 
 {
@@ -19,11 +20,15 @@ int main()
 // 	{
 // 		object.Muxering();
 // 	}	
-	FFEncodePcmToAAc encodePcmToAAcObject(input_pcm_filename, out_aac_filename);
+	/*FFEncodePcmToAAc encodePcmToAAcObject(input_pcm_filename, out_aac_filename);
 	if (encodePcmToAAcObject.InitFFmpeg())
 	{
 		encodePcmToAAcObject.EnCode();
-	}
+	}*/
+
+	FFAudioConversionObject audioConversionObject("Audio.G711", "Audio.mp3");
+	audioConversionObject.Initialize(_enAudioCodec_G711_A);
+	audioConversionObject.DataConversion();
 
 	return 1;
 }
